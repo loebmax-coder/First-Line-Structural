@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Join a national specialist pool providing targeted structural review insight on complex building types and common construction pitfalls." />
+  <title>Expert Network | First Line Structural</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html"><span class="logo-line"></span>First Line Structural</a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="index.html">Review</a>
+        <a href="services.html">Services</a>
+        <a href="expert-network.html" class="active">Expert Network</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="eyebrow">Specialist review network</p>
+        <h1>Help improve industry consistency and structural outcomes.</h1>
+        <p class="lead">First Line Structural is building a pool of engineers with deep experience in specific systems, materials, regions, and construction pitfalls. The goal is simple: help project teams catch the right issues earlier.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <p class="kicker">The role</p>
+          <h2>Provide targeted expertise without taking over the project.</h2>
+          <p>Expert contributors provide scoped preliminary input based on the needs of a project. You may be asked to identify common mistakes, review a detail type, comment on constructability risks, or help frame the questions a city, architect, owner, or primary reviewer should ask.</p>
+          <p>You are not acting as the Engineer of Record for the project through this network, and you are not expected to stamp drawings. Your role is focused technical judgment: where projects like this commonly go wrong and what deserves closer attention.</p>
+        </div>
+        <div class="panel">
+          <h3>Useful specialties</h3>
+          <ul class="checklist">
+            <li>Mass timber and hybrid structural systems</li>
+            <li>Steel connections and erection-sensitive details</li>
+            <li>Seismic detailing and capacity design</li>
+            <li>High-wind design and load transfer</li>
+            <li>Masonry, concrete, wood, and cold-formed steel</li>
+            <li>Existing building evaluation and retrofit</li>
+            <li>Industrial, institutional, and unusual building types</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container split reverse">
+        <div class="panel">
+          <h3>What you may contribute</h3>
+          <ul class="checklist">
+            <li>Common plan review misses</li>
+            <li>Construction pitfalls you see repeatedly</li>
+            <li>Detailing concerns that are easy to underestimate</li>
+            <li>Material-specific lessons learned</li>
+            <li>Questions a reviewer should ask before approval</li>
+          </ul>
+        </div>
+        <div>
+          <p class="kicker">Why it matters</p>
+          <h2>Better projects come from better shared judgment.</h2>
+          <p>Structural engineering knowledge is often trapped in individual experience. This network is intended to make that experience more useful across projects, jurisdictions, and design teams—without turning every specialist into the stamping engineer.</p>
+          <p>The best review is not just about checking grout space, slab thickness, or a generic detail note. It is about understanding whether the structural system is coherent, efficient, buildable, and safe.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="submit-experience">
+      <div class="container narrow">
+        <p class="kicker">Submit your experience</p>
+        <h2>Join the expert pool.</h2>
+        <p class="muted">This form is set up to send the submission to a Google Sheet and trigger an email notification. Replace the placeholder script URL in <code>assets/js/main.js</code> after you create the Google Apps Script endpoint.</p>
+
+        <form class="form-card" id="expertForm">
+          <div class="grid-2">
+            <label>Full name
+              <input name="name" type="text" required placeholder="Jane Doe" />
+            </label>
+            <label>Email
+              <input name="email" type="email" required placeholder="jane@example.com" />
+            </label>
+          </div>
+
+          <div class="grid-2">
+            <label>Location / state
+              <input name="location" type="text" placeholder="UT, CO, CA..." />
+            </label>
+            <label>Credentials
+              <input name="credentials" type="text" placeholder="PE, SE, PhD, etc." />
+            </label>
+          </div>
+
+          <label>Primary specialties
+            <input name="specialties" type="text" required placeholder="Mass timber, seismic detailing, steel connections..." />
+          </label>
+
+          <label>Project types you know well
+            <textarea name="projectTypes" rows="4" placeholder="Tall wood housing, schools, industrial equipment platforms, hospitals, adaptive reuse..."></textarea>
+          </label>
+
+          <label>Common design mistakes you see
+            <textarea name="commonMistakes" rows="5" required placeholder="What do engineers, architects, or reviewers commonly miss?"></textarea>
+          </label>
+
+          <label>Construction pitfalls you would flag early
+            <textarea name="pitfalls" rows="5" required placeholder="What looks fine on paper but often causes field problems?"></textarea>
+          </label>
+
+          <label>How would you prefer to contribute?
+            <select name="contributionType" required>
+              <option value="" selected disabled>Select one...</option>
+              <option>Occasional paid project review</option>
+              <option>Technical interview / knowledge contribution</option>
+              <option>Both project review and knowledge contribution</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+
+          <label class="checkbox">
+            <input name="acknowledgment" type="checkbox" required />
+            <span>I understand this expert pool is for scoped technical input, not replacing the Engineer of Record or assuming full project review liability.</span>
+          </label>
+
+          <button class="btn primary" type="submit">Submit experience</button>
+          <p class="form-status" id="expertFormStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p><strong>First Line Structural</strong><br><span>Independent structural design review.</span></p>
+      <p class="small">Expert contributors provide scoped advisory input only unless otherwise agreed in writing.</p>
+      <p class="small">© <span id="year"></span> First Line Structural</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
