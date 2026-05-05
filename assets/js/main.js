@@ -1,56 +1,46 @@
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
+  const SCRIPT_URL = "YOUR_SCRIPT_URL_HERE"; // replace with your Apps Script URL
 
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  function handleSubmit(formId, statusId, payloadBuilder) {
+    const form = document.getElementById(formId);
+    if (!form) return;
 
-  const endpoint = "https://script.google.com/macros/s/AKfycbyv_VHNBKjAFQ46uFwd40w71wnFc8k643-leiUKpRQOxH1I5sKZBK3suiUs-tRkScqcUA/exec";
-
-  const form = document.getElementById("expertForm");
-
-  if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      const status = document.getElementById("expertFormStatus");
-      const data = Object.fromEntries(new FormData(form).entries());
+      const status = document.getElementById(statusId);
+      if (status) status.innerText = "Submitting...";
+
+      const data = Object.fromEntries(new FormData(form));
+      const payload = payloadBuilder ? payloadBuilder(data) : data;
 
       try {
-        await fetch(endpoint, {
+        await fetch(SCRIPT_URL, {
           method: "POST",
-          body: JSON.stringify(data),
-          headers: { "Content-Type": "application/json" }
+          body: JSON.stringify(payload),
         });
 
-        status.textContent = "Submission received. Thank you.";
+        if (status) status.innerText = "Submitted successfully.";
         form.reset();
-
       } catch (err) {
-        status.textContent = "Error submitting form. Please try again.";
+        if (status) status.innerText = "Something went wrong. Try again.";
       }
     });
   }
 
-});
-const form = document.getElementById("projectForm");
+  // Project intake form (contact page)
+  handleSubmit("projectForm", "formStatus", (data) => ({
+    type: "project",
+    ...data,
+  }));
 
-if (form) {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  // Expert signup form (expert-network page)
+  handleSubmit("expertForm", "expertStatus", (data) => ({
+    type: "expert",
+    ...data,
+  }));
 
-    const status = document.getElementById("formStatus");
-    const data = Object.fromEntries(new FormData(form));
-
-    try {
-      await fetch("https://script.google.com/macros/s/AKfycbyv_VHNBKjAFQ46uFwd40w71wnFc8k643-leiUKpRQOxH1I5sKZBK3suiUs-tRkScqcUA/exec", {
-        method: "POST",
-        body: JSON.stringify(data),
-      });
-
-      status.innerText = "Submitted successfully.";
-      form.reset();
-
-    } catch (err) {
-      status.innerText = "Something went wrong. Try again.";
-    }
-  });
-}
+  // Footer year
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+})();
