@@ -21,11 +21,67 @@
 
   <main class="section">
     <div class="container narrow">
-      <h1>Contact</h1>
-      <p class="lead">Send us your project information and we will help define a review scope.</p>
+      <h1>Request Structural Review Support</h1>
+      <p class="lead">Submit your project information and we will help define a review scope tailored to the building, timeline, and level of complexity.</p>
+      <p class="muted">Licensed across the Mountain West. Additional jurisdictions available as needed.</p>
 
-      <p><strong>Email:</strong> info@firstlinestructural.com</p>
-      <p class="muted">Include drawings, location, and key concerns for fastest response.</p>
+      <form id="projectForm" class="form-card">
+
+        <div class="grid-2">
+          <label>Name
+            <input type="text" name="name" required>
+          </label>
+
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+        </div>
+
+        <div class="grid-2">
+          <label>Project Location
+            <input type="text" name="location">
+          </label>
+
+          <label>Project Type
+            <select name="type">
+              <option>Commercial</option>
+              <option>Mass Timber</option>
+              <option>Industrial</option>
+              <option>Residential</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="grid-2">
+          <label>Project Stage
+            <select name="stage">
+              <option>Concept</option>
+              <option>Permit Set</option>
+              <option>Construction</option>
+              <option>Existing Structure</option>
+            </select>
+          </label>
+
+          <label>Timeline
+            <input type="text" name="timeline">
+          </label>
+        </div>
+
+        <label>Key Concerns
+          <textarea name="concerns"></textarea>
+        </label>
+
+        <label>Drawings Link
+          <input type="text" name="documents">
+        </label>
+
+        <button class="btn primary" type="submit">Submit Project</button>
+
+        <p id="formStatus" class="small"></p>
+
+      </form>
+
     </div>
   </main>
 
