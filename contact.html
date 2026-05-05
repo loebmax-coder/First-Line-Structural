@@ -7,90 +7,101 @@
   <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="logo" href="index.html"><span class="logo-line"></span>First Line Structural</a>
-      <nav class="nav">
-        <a href="index.html">Review</a>
-        <a href="services.html">Services</a>
-        <a href="expert-network.html">Expert Network</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="section">
-    <div class="container narrow">
-      <h1>Request Structural Review Support</h1>
-      <p class="lead">Submit your project information and we will help define a review scope tailored to the building, timeline, and level of complexity.</p>
-      <p class="muted">Licensed across the Mountain West. Additional jurisdictions available as needed.</p>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="logo" href="index.html"><span class="logo-line"></span>First Line Structural</a>
+    <nav class="nav">
+      <a href="index.html">Review</a>
+      <a href="services.html">Services</a>
+      <a href="expert-network.html">Expert Network</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      <form id="projectForm" class="form-card">
+<main class="section">
+  <div class="container narrow">
 
-        <div class="grid-2">
-          <label>Name
-            <input type="text" name="name" required>
-          </label>
+    <h1>Request Structural Review Support</h1>
 
-          <label>Email
-            <input type="email" name="email" required>
-          </label>
-        </div>
+    <p class="lead">
+      Submit your project information and we will help define a review scope tailored to the building, timeline, and level of complexity.
+    </p>
 
-        <div class="grid-2">
-          <label>Project Location
-            <input type="text" name="location">
-          </label>
+    <p class="muted">
+      Licensed across the Mountain West. Additional jurisdictions available as needed.
+    </p>
 
-          <label>Project Type
-            <select name="type">
-              <option>Commercial</option>
-              <option>Mass Timber</option>
-              <option>Industrial</option>
-              <option>Residential</option>
-              <option>Other</option>
-            </select>
-          </label>
-        </div>
+    <form id="projectForm" class="form-card">
 
-        <div class="grid-2">
-          <label>Project Stage
-            <select name="stage">
-              <option>Concept</option>
-              <option>Permit Set</option>
-              <option>Construction</option>
-              <option>Existing Structure</option>
-            </select>
-          </label>
-
-          <label>Timeline
-            <input type="text" name="timeline">
-          </label>
-        </div>
-
-        <label>Key Concerns
-          <textarea name="concerns"></textarea>
+      <div class="grid-2">
+        <label>Name
+          <input type="text" name="name" required>
         </label>
 
-        <label>Drawings Link
-          <input type="text" name="documents">
+        <label>Email
+          <input type="email" name="email" required>
+        </label>
+      </div>
+
+      <div class="grid-2">
+        <label>Project Location
+          <input type="text" name="location">
         </label>
 
-        <button class="btn primary" type="submit">Submit Project</button>
+        <label>Project Type
+          <select name="type">
+            <option>Commercial</option>
+            <option>Mass Timber</option>
+            <option>Industrial</option>
+            <option>Residential</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div>
 
-        <p id="formStatus" class="small"></p>
+      <div class="grid-2">
+        <label>Project Stage
+          <select name="stage">
+            <option>Concept</option>
+            <option>Permit Set</option>
+            <option>Construction</option>
+            <option>Existing Structure</option>
+          </select>
+        </label>
 
-      </form>
+        <label>Timeline
+          <input type="text" name="timeline">
+        </label>
+      </div>
 
-    </div>
-  </main>
+      <label>Key Concerns
+        <textarea name="concerns"></textarea>
+      </label>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <p><strong>First Line Structural</strong></p>
-      <p class="small">© <span id="year"></span></p>
-    </div>
-  </footer>
-  <script src="/assets/js/main.js"></script>
+      <label>Drawings Link
+        <input type="text" name="documents">
+      </label>
+
+      <button class="btn primary" type="submit">
+        Submit Project
+      </button>
+
+      <p id="formStatus" class="small"></p>
+
+    </form>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <p><strong>First Line Structural</strong></p>
+    <p class="small">© <span id="year"></span></p>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
