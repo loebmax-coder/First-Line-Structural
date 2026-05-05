@@ -104,3 +104,43 @@ code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:6px}
   .hero{padding-top:56px}
   .cta{flex-direction:column;align-items:flex-start}
 }
+/* --- IMAGE + BLUEPRINT STYLES --- */
+
+.hero-blueprint {
+  position: relative;
+}
+
+.hero-blueprint::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/assets/images/blueprint-bg.png') center/cover no-repeat;
+  opacity: 0.08;
+  filter: grayscale(100%) blur(1px);
+  z-index: 0;
+}
+
+.hero-blueprint > * {
+  position: relative;
+  z-index: 1;
+}
+
+.review-figure img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: transform 0.3s ease;
+}
+
+.review-figure img:hover {
+  transform: scale(1.03);
+}
+
+.visual-split {
+  align-items: center;
+}
+
+.statement {
+  font-weight: 700;
+  color: #f2f6fb;
+}
