@@ -31,3 +31,26 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+const form = document.getElementById("projectForm");
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const status = document.getElementById("formStatus");
+    const data = Object.fromEntries(new FormData(form));
+
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbyv_VHNBKjAFQ46uFwd40w71wnFc8k643-leiUKpRQOxH1I5sKZBK3suiUs-tRkScqcUA/exec", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });
+
+      status.innerText = "Submitted successfully.";
+      form.reset();
+
+    } catch (err) {
+      status.innerText = "Something went wrong. Try again.";
+    }
+  });
+}
