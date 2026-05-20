@@ -21,7 +21,7 @@
 </header>
 
 <main class="section">
-  <div class="container narrow">
+  <div class="container narrow" style="max-width:760px;">
 
     <h1>Request Structural Review Support</h1>
 
@@ -29,13 +29,13 @@
       Submit your project information and we will help define a review scope tailored to the building, timeline, and level of complexity.
     </p>
 
-    <p class="muted">
+    <p class="muted" style="margin-bottom:28px; color:#7c8b9a;">
       Licensed across the Mountain West. Additional jurisdictions available as needed.
     </p>
 
     <form id="projectForm" class="form-card">
 
-      <div class="grid-2">
+      <div class="form-grid">
         <label>Name
           <input type="text" name="name" required>
         </label>
@@ -45,7 +45,7 @@
         </label>
       </div>
 
-      <div class="grid-2">
+      <div class="form-grid">
         <label>Project Location
           <input type="text" name="location">
         </label>
@@ -61,7 +61,7 @@
         </label>
       </div>
 
-      <div class="grid-2">
+      <div class="form-grid">
         <label>Project Stage
           <select name="stage">
             <option>Concept</option>
@@ -76,15 +76,11 @@
         </label>
       </div>
 
-      <label>Key Concerns
-        <textarea name="concerns"></textarea>
+      <label>Comments
+        <textarea name="comments" rows="6" placeholder="Describe the project, structural systems, review goals, or any coordination concerns."></textarea>
       </label>
 
-      <label>Drawings Link
-        <input type="text" name="documents">
-      </label>
-
-      <button class="btn primary" type="submit">
+      <button class="btn primary" type="submit" style="margin-top:28px; width:100%;">
         Submit Project
       </button>
 
