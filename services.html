@@ -5,55 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services | First Line Structural</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+
+    .service-process-grid {
+      display: grid;
+      gap: 16px;
+      margin: 34px 0 44px;
+      max-width: 620px;
+    }
+
+    .service-process-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 24px;
+      transition: 0.2s ease;
+    }
+
+    .service-process-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(110,168,255,0.3);
+    }
+
+    .service-process-card h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .service-process-card p {
+      color: #9fb3c8;
+      line-height: 1.6;
+    }
+
+  </style>
+
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="logo" href="index.html"><span class="logo-line"></span>First Line Structural</a>
-      <nav class="nav">
-        <a href="index.html">Review</a>
-        <a href="services.html" class="active">Services</a>
-        <a href="expert-network.html">Expert Network</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="section">
-    <div class="container">
-      <div class="split visual-split">
-        <div>
-          <h1>Structural Design Review Services</h1>
-          <p class="lead">Our primary focus is independent structural design review for municipalities, architects, and project teams working on complex or high-risk buildings.</p>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="logo" href="index.html">First Line Structural</a>
 
-          <h2>Review Services</h2>
-          <ul class="checklist">
-            <li>Permit review support for cities and municipalities</li>
-            <li>Independent peer review for architects and owners</li>
-            <li>Complex system and load path evaluation</li>
-            <li>Connection and constructability review</li>
-            <li>Identification of common design and detailing risks</li>
-          </ul>
+    <nav class="nav">
+      <a href="index.html">Review</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="expert-network.html">Expert Network</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-          <h2>Approach</h2>
-          <p>We combine traditional structural review with targeted input from a broader network of experienced engineers. This allows us to identify issues earlier, improve consistency, and focus attention on the elements that most impact safety and performance.</p>
+<main class="section">
 
-          <h2>Design Services (by request)</h2>
-          <p>While our focus is review, select structural design services may be provided under separate scope and applicable licensure when appropriate.</p>
+  <div class="container">
+
+    <div class="split visual-split" style="align-items:start; gap:70px;">
+
+      <div>
+
+        <p class="eyebrow">Services</p>
+
+        <h1>Structural review support for projects with elevated coordination risk.</h1>
+
+        <p class="lead">
+          Our primary focus is independent structural design review for municipalities, architects, owners, and project teams working on complex or high-consequence structures.
+        </p>
+
+        <div class="service-process-grid">
+
+          <div class="service-process-card">
+            <h3>Permit & Independent Review</h3>
+            <p>
+              Focused review support for municipalities, agencies, architects, and owners seeking additional technical oversight.
+            </p>
+          </div>
+
+          <div class="service-process-card">
+            <h3>Load Path & System Evaluation</h3>
+            <p>
+              Independent evaluation of transfer conditions, irregular framing behavior, diaphragm assumptions, and system continuity.
+            </p>
+          </div>
+
+          <div class="service-process-card">
+            <h3>Connection & Constructability Review</h3>
+            <p>
+              Identification of detailing conflicts, coordination concerns, and field conditions that commonly lead to RFIs and revisions.
+            </p>
+          </div>
+
+          <div class="service-process-card">
+            <h3>Specialized Technical Input</h3>
+            <p>
+              Additional expertise through a growing network of experienced structural engineers and industry specialists.
+            </p>
+          </div>
+
         </div>
-        <div style="max-width:480px; margin-left:auto; background:rgba(255,255,255,0.04); padding:16px; border-radius:14px; border:1px solid rgba(255,255,255,0.08); box-shadow:0 20px 60px rgba(0,0,0,0.35);">
-          <img src="assets/images/redline-review.png" alt="Example structural review markup" style="width:100%; border-radius:8px; display:block;">
-        </div>
+
+        <h2>Approach</h2>
+
+        <p>
+          We combine focused structural review with targeted consulting input from specialized engineers when projects involve unusual systems, industrial applications, complex load transfer, or elevated constructability risk.
+        </p>
+
       </div>
-    </div>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <p><strong>First Line Structural</strong></p>
-      <p class="small">© <span id="year"></span></p>
+      <div style="max-width:520px; margin-left:auto; background:rgba(255,255,255,0.04); padding:20px; border-radius:20px; border:1px solid rgba(255,255,255,0.08); box-shadow:0 20px 60px rgba(0,0,0,0.35);">
+
+        <img src="assets/images/redline-review.png" alt="Example structural review markup" style="width:100%; border-radius:12px; display:block;">
+
+        <p style="margin-top:16px; color:#8fa3b8; font-size:14px;">
+          Typical review focus areas include transfer conditions, detailing coordination, diaphragm assumptions, collector continuity, anchorage, and constructability.
+        </p>
+
+      </div>
+
     </div>
-  </footer>
-  <script src="assets/js/main.js"></script>
+
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <p><strong>First Line Structural</strong></p>
+    <p class="small">© <span id="year"></span></p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>
