@@ -5,6 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>First Line Structural</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+
+  <style>
+
+    .technical-process-grid {
+      display: grid;
+      gap: 14px;
+      margin-top: 36px;
+      max-width: 560px;
+    }
+
+    .technical-process-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 24px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      transition: 0.2s ease;
+    }
+
+    .technical-process-item:hover {
+      border-color: rgba(110,168,255,0.35);
+      transform: translateY(-2px);
+    }
+
+    .technical-process-item strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: white;
+    }
+
+    .technical-process-item span {
+      color: #9fb3c8;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .technical-arrow {
+      color: #6ea8ff;
+      font-size: 28px;
+      padding-left: 20px;
+      opacity: 0.8;
+      flex-shrink: 0;
+    }
+
+  </style>
+
 </head>
 
 <body>
@@ -77,7 +126,6 @@
             <path d="M480 100V620" />
             <path d="M600 100V620" />
             <path d="M720 100V620" />
-
             <path d="M120 140H760" />
             <path d="M120 260H760" />
             <path d="M120 380H760" />
@@ -89,7 +137,6 @@
             <path d="M340 560V180" />
             <path d="M500 560V260" />
             <path d="M660 560V160" />
-
             <path d="M180 560H660" />
             <path d="M180 420H660" />
             <path d="M180 280H660" />
@@ -99,9 +146,6 @@
             <path d="M180 420L340 280" />
             <path d="M340 280L500 420" />
             <path d="M500 420L660 280" />
-
-            <path d="M180 560L340 420" opacity="0.7" />
-            <path d="M340 420L500 560" opacity="0.7" />
           </g>
 
           <g fill="#6ea8ff">
@@ -109,16 +153,6 @@
             <circle cx="340" cy="280" r="7" />
             <circle cx="500" cy="420" r="7" />
             <circle cx="660" cy="280" r="7" />
-          </g>
-
-          <g opacity="0.8" stroke="#6ea8ff" stroke-width="3">
-            <path d="M340 120V180" />
-            <path d="M500 200V260" />
-          </g>
-
-          <g fill="#6ea8ff" opacity="0.85">
-            <path d="M330 135L340 120L350 135" />
-            <path d="M490 215L500 200L510 215" />
           </g>
 
         </svg>
@@ -189,11 +223,40 @@
         Our review process emphasizes the project-specific conditions that commonly create RFIs, field revisions, permit delays, and long-term performance concerns if unresolved early in design.
       </p>
 
-      <div class="technical-list">
-        <div>Transfer Conditions</div>
-        <div>System Continuity</div>
-        <div>Constructability</div>
-        <div>Connection Assumptions</div>
+      <div class="technical-process-grid">
+
+        <div class="technical-process-item">
+          <div>
+            <strong>Project Conditions</strong>
+            <span>Site geometry, materials, and code drivers.</span>
+          </div>
+          <div class="technical-arrow">›</div>
+        </div>
+
+        <div class="technical-process-item">
+          <div>
+            <strong>System Continuity</strong>
+            <span>Lateral, gravity, and diaphragm load paths.</span>
+          </div>
+          <div class="technical-arrow">›</div>
+        </div>
+
+        <div class="technical-process-item">
+          <div>
+            <strong>Constructability</strong>
+            <span>Sequencing, access, tolerances, and coordination.</span>
+          </div>
+          <div class="technical-arrow">›</div>
+        </div>
+
+        <div class="technical-process-item">
+          <div>
+            <strong>Connection Assumptions</strong>
+            <span>Demand paths, capacities, and detailing clarity.</span>
+          </div>
+          <div class="technical-arrow">›</div>
+        </div>
+
       </div>
 
     </div>
